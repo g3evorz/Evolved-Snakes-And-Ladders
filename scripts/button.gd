@@ -9,7 +9,7 @@ func _ready():
 
 ## Menghasilkan angka acak 1-6 saat tombol ditekan
 func _on_button_pressed():
-	random_number = randi_range(3, 3)	
+	random_number = randi_range(1, 6)	
 	number_generated.emit(random_number)
 
 ## Mengembalikan angka acak yang dihasilkan
