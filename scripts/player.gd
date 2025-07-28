@@ -53,7 +53,7 @@ func _move_to_next_point():
 		
 
 func _on_ladder_1_body_entered(body: Node2D) -> void:
-	if movement_finished:  # Jika movement_finished adalah sinyal, ini harus diganti pengecekan kondisi boolean
+	if movement_finished and !moving:  # Jika movement_finished adalah sinyal, ini harus diganti pengecekan kondisi boolean
 		var count = hitbox.target_point_index
 		var path = get_parent().curve
 		if count < path.get_point_count():
@@ -62,7 +62,7 @@ func _on_ladder_1_body_entered(body: Node2D) -> void:
 			moving = true
 			current_point_index += 1
 			# Menunggu 1 frame agar animasi atau gerakan bisa dimulai
-			
+				
 		else:
 			print("Player cannot jump: index target melebihi jumlah point")
 			movement_finished.emit()
