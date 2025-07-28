@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="GAMESEED Projects"
-run/main_scene="res://main.tscn"
+config/name="GAMESEED Projects Demo"
+run/main_scene="res://scene/main.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://assets/icon.svg"
+config/icon="res://icon.svg"
 
 [dotnet]
 
