@@ -2,6 +2,7 @@ extends TextureButton
 
 signal number_generated(number: int) # Sinyal untuk mengirim angka acak
 var random_number: int = 0 # Angka acak yang dihasilkan (1-6)
+@onready var sprite = $AnimatedSprite2D
 
 ## Menghubungkan sinyal pressed saat tombol dimuat
 func _ready():
@@ -9,10 +10,21 @@ func _ready():
 
 ## Menghasilkan angka acak 1-6 saat tombol ditekan
 func _on_button_pressed():
-	random_number = randi_range(1, 6)	
-	number_generated.emit(random_number)
+	sprite.play("roll")
+	random_number = randi_range(1, 6)
+	sprite.animation_finished.connect(dice_animation_finished)
 
 ## Mengembalikan angka acak yang dihasilkan
 ## @return: Angka acak dari 1 hingga 6
 func get_random_number() -> int:
 	return random_number
+
+func dice_animation_finished():
+	$Timer.start()
+	sprite.play("face")
+	sprite.frame = random_number - 1
+	
+
+
+func _on_timer_timeout() -> void:
+	number_generated.emit(random_number)
