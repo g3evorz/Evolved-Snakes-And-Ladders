@@ -1,14 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1vkibpg8hswi"]
+[gd_scene load_steps=13 format=3 uid="uid://c1vkibpg8hswi"]
 
-[ext_resource type="Script" uid="uid://c8yr1wpw84tp2" path="res://scripts/gameManager.gd" id="1_272bh"]
+[ext_resource type="Script" uid="uid://c8yr1wpw84tp2" path="res://scripts/Main_script.gd" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://oy537cnb33aq" path="res://snakes-and-ladders.webp" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://be0cch11bpfn8" path="res://scene/character.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://csytdtfc5v3f4" path="res://scripts/player.gd" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://c0pbc2ma73jrj" path="res://scripts/button.gd" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://c23tx8j4pw2kw" path="res://icon.svg" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://c0pbc2ma73jrj" path="res://scripts/texture_button.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c23tx8j4pw2kw" path="res://assets/icon.svg" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://jnrh0h00wri7" path="res://scripts/bot_follow.gd" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://byc7aimbged3s" path="res://scene/char_Player_1.tscn" id="4_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://catrt0bc565x" path="res://scene/Ladder.tscn" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://dx68hci6qspl6" path="res://scripts/ladder.gd" id="8_b5f6u"]
+[ext_resource type="Texture2D" uid="uid://il3vqcpeausx" path="res://assets/start/Start2.png" id="9_k65ib"]
+[ext_resource type="Texture2D" uid="uid://bqbya4jnfwliu" path="res://assets/start/Start4.png" id="10_wscrc"]
 
 [sub_resource type="Curve2D" id="Curve2D_1bvp3"]
 _data = {
@@ -16,9 +18,9 @@ _data = {
 }
 point_count = 100
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("random_button", "player", "bot1", "bot2", "bot3")]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("random_button", "player", "bot1", "bot2", "bot3")]
 script = ExtResource("1_272bh")
-random_button = NodePath("Button")
+random_button = NodePath("Roll_Button")
 player = NodePath("Path2D/Player")
 bot1 = NodePath("Path2D/Bot_1")
 bot2 = NodePath("Path2D/Bot_2")
@@ -47,8 +49,10 @@ rotates = false
 script = ExtResource("2_h2yge")
 hitbox = NodePath("../Ladder_1")
 
-[node name="CharacterBody2D" parent="Path2D/Player" instance=ExtResource("2_0xm2m")]
-collision_mask = 1
+[node name="CharacterBody2D" parent="Path2D/Player" instance=ExtResource("4_b5f6u")]
+position = Vector2(11.1923, 3.42653)
+rotation = -0.0516781
+scale = Vector2(1.5, 1.5)
 
 [node name="Bot_1" type="PathFollow2D" parent="Path2D"]
 position = Vector2(-272, 272)
@@ -90,11 +94,19 @@ target_point_index = 13
 [node name="Ladder_2" parent="Path2D" instance=ExtResource("7_5vw27")]
 position = Vector2(93, 214)
 
-[node name="Button" type="Button" parent="."]
-offset_left = -537.0
-offset_top = 206.0
-offset_right = -363.0
-offset_bottom = 291.0
+[node name="Roll_Button" type="TextureButton" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -551.0
+offset_top = 249.0
+offset_right = -487.0
+offset_bottom = 289.0
+grow_vertical = 0
+scale = Vector2(3.36, 1.60942)
+texture_normal = ExtResource("9_k65ib")
+texture_pressed = ExtResource("10_wscrc")
+stretch_mode = 0
 script = ExtResource("4_1bvp3")
 
 [connection signal="body_entered" from="Path2D/Ladder_1" to="Path2D/Player" method="_on_ladder_1_body_entered"]

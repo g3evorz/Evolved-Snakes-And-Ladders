@@ -52,7 +52,7 @@ func _move_to_next_point():
 		current_point_index += 1
 		
 
-func _on_ladder_1_body_entered(body: Node2D) -> void:
+func _on_ladder_1_body_entered(_body: Node2D) -> void:
 	if movement_finished and !moving:  # Jika movement_finished adalah sinyal, ini harus diganti pengecekan kondisi boolean
 		var count = hitbox.target_point_index
 		var path = get_parent().curve

@@ -37,9 +37,11 @@ func _process(delta):
 func start_movement(steps: int):
 	if not moving:
 		var path = get_parent().curve
+		global.player_is_move = false
 		if current_point_index < path.get_point_count():
 			steps_to_take = min(steps, path.get_point_count() - current_point_index)
 			_move_to_next_point()
+	global.player_is_move = true
 
 ## Mengatur pergerakan ke titik berikutnya di path
 func _move_to_next_point():

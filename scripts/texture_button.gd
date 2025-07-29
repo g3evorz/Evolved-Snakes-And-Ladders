@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 signal number_generated(number: int) # Sinyal untuk mengirim angka acak
 var random_number: int = 0 # Angka acak yang dihasilkan (1-6)
