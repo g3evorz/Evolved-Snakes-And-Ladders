@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="GAMESEED Projects Demo"
-run/main_scene="res://scene/main.tscn"
+run/main_scene="uid://e2t0ulvl0opr"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-global="*res://scripts/Global.gd"
 
 [dotnet]
 
