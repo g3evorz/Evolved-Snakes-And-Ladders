@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkfgl4r5we6gl"
-path="res://.godot/imported/Run5.png-308dfe10d1662af6777c5087ac56971e.ctex"
+uid="uid://c2ghanxgu6nbt"
+path="res://.godot/imported/Diego_idle1.png-a7fd0c99f8b3b052b776a19ee0cdc117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Running (32 x 32)/Run5.png"
-dest_files=["res://.godot/imported/Run5.png-308dfe10d1662af6777c5087ac56971e.ctex"]
+source_file="res://assets/player_2/Diego_Idle (32 x 48)/Diego_idle1.png"
+dest_files=["res://.godot/imported/Diego_idle1.png-a7fd0c99f8b3b052b776a19ee0cdc117.ctex"]
 
 [params]
 

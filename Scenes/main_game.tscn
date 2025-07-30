@@ -1,0 +1,458 @@
+[gd_scene load_steps=25 format=3 uid="uid://e2t0ulvl0opr"]
+
+[ext_resource type="Script" uid="uid://dv3ysab0be52y" path="res://scripts/game_manager.gd" id="1_l756w"]
+[ext_resource type="Texture2D" uid="uid://clugvkttegwni" path="res://assets/player_1/Idle (32 x 32)/sprite_0.png" id="2_r0mdn"]
+[ext_resource type="Texture2D" uid="uid://udrwf3y70xwi" path="res://assets/Colorful Number Sense Snakes and Ladders Worksheet.png" id="2_vvhy6"]
+[ext_resource type="Texture2D" uid="uid://dcy6c07un24n8" path="res://assets/player_1/Idle (32 x 32)/sprite_1.png" id="3_0xqxu"]
+[ext_resource type="Texture2D" uid="uid://boqicbb5pfgkq" path="res://assets/player_1/Idle (32 x 32)/sprite_2.png" id="4_tpqse"]
+[ext_resource type="Texture2D" uid="uid://ddialfyqqaljo" path="res://assets/player_1/Idle (32 x 32)/sprite_3.png" id="5_c78sm"]
+[ext_resource type="Texture2D" uid="uid://b6umoshmsugyd" path="res://assets/player_1/Idle (32 x 32)/sprite_4.png" id="6_i47ox"]
+[ext_resource type="Texture2D" uid="uid://bym4di0vcsefb" path="res://assets/player_1/Idle (32 x 32)/sprite_5.png" id="7_sftma"]
+[ext_resource type="Texture2D" uid="uid://dhjp21wpblunj" path="res://assets/player_1/Idle (32 x 32)/sprite_6.png" id="8_erobn"]
+[ext_resource type="Texture2D" uid="uid://brxasayx5rgji" path="res://assets/player_1/Idle (32 x 32)/sprite_7.png" id="9_vc13p"]
+[ext_resource type="Texture2D" uid="uid://rphh6x51p080" path="res://assets/player_1/Idle (32 x 32)/sprite_8.png" id="10_gpk8t"]
+[ext_resource type="Texture2D" uid="uid://duxxt6ohlauag" path="res://assets/player_2/Diego_Idle (32 x 48)/Diego_idle0.png" id="11_ry2jr"]
+[ext_resource type="Texture2D" uid="uid://c2ghanxgu6nbt" path="res://assets/player_2/Diego_Idle (32 x 48)/Diego_idle1.png" id="12_qnvbm"]
+[ext_resource type="Texture2D" uid="uid://1f8pw3q4owxr" path="res://assets/player_2/Diego_Idle (32 x 48)/Diego_idle2.png" id="13_vvhy6"]
+[ext_resource type="Texture2D" uid="uid://dmd5x2npx3peo" path="res://assets/player_2/Diego_Idle (32 x 48)/Diego_idle3.png" id="14_ns551"]
+[ext_resource type="Texture2D" uid="uid://bgc2rbqgvgv7f" path="res://assets/player_2/Diego_Running (32 x 48)/Diego_run0.png" id="15_0bxlt"]
+[ext_resource type="Texture2D" uid="uid://bnexmrtxllhi" path="res://assets/player_2/Diego_Running (32 x 48)/Diego_run1.png" id="16_58qbg"]
+[ext_resource type="Texture2D" uid="uid://busl5d6woh6jj" path="res://assets/player_2/Diego_Running (32 x 48)/Diego_run2.png" id="17_gnsnf"]
+[ext_resource type="Texture2D" uid="uid://bo6321cm5dgil" path="res://assets/player_2/Diego_Running (32 x 48)/Diego_run3.png" id="18_06qyo"]
+[ext_resource type="Texture2D" uid="uid://3cad6sp6o7pr" path="res://assets/player_2/Diego_Running (32 x 48)/Diego_run4.png" id="19_3bgrf"]
+[ext_resource type="Texture2D" uid="uid://bnufgbr2t71bs" path="res://assets/player_2/Diego_Running (32 x 48)/Diego_run5.png" id="20_vt8ts"]
+[ext_resource type="Texture2D" uid="uid://il3vqcpeausx" path="res://assets/start/Start2.png" id="21_qnvbm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hm1wn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r0mdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0xqxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tpqse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c78sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i47ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sftma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_erobn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vc13p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gpk8t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0mdn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ry2jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qnvbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vvhy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ns551")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_0bxlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_58qbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gnsnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_06qyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3bgrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vt8ts")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Main_game" type="Node"]
+
+[node name="Game_manager" type="Node" parent="." node_paths=PackedStringArray("player_nodes")]
+script = ExtResource("1_l756w")
+player_nodes = [NodePath("../Players/Player_1"), NodePath("../Players/Player_2")]
+
+[node name="Board" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Board"]
+z_index = -6
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_vvhy6")
+centered = false
+
+[node name="Players" type="Node" parent="."]
+
+[node name="Player_1" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
+position = Vector2(230, 530)
+scale = Vector2(1.73437, 1.73437)
+sprite_frames = SubResource("SpriteFrames_hm1wn")
+animation = &"idle"
+
+[node name="Player_2" type="AnimatedSprite2D" parent="Players"]
+position = Vector2(231, 487)
+scale = Vector2(1.28125, 1.28125)
+sprite_frames = SubResource("SpriteFrames_r0mdn")
+animation = &"idle"
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Roll_dice_button" type="TextureButton" parent="UI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = -83.0
+offset_right = 262.0
+offset_bottom = -18.0
+grow_vertical = 0
+texture_normal = ExtResource("21_qnvbm")
+stretch_mode = 0
+
+[node name="Turn_info_label" type="Label" parent="UI"]
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 236.0
+offset_bottom = 74.0
+
+[node name="Tile_Marker" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(318, 583)
+
+[node name="2" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(375, 583)
+
+[node name="3" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(433, 583)
+
+[node name="4" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(491, 583)
+
+[node name="5" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(547, 583)
+
+[node name="6" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(605, 583)
+
+[node name="7" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(662, 583)
+
+[node name="8" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(719, 583)
+
+[node name="9" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(777, 583)
+
+[node name="10" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(836, 583)
+
+[node name="11" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(836, 525)
+
+[node name="12" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(777, 525)
+
+[node name="13" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(720, 525)
+
+[node name="14" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(662, 525)
+
+[node name="15" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(605, 525)
+
+[node name="16" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(546, 525)
+
+[node name="17" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 525)
+
+[node name="18" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(431, 525)
+
+[node name="19" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(373, 525)
+
+[node name="20" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 525)
+
+[node name="21" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 467)
+
+[node name="22" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(375, 467)
+
+[node name="23" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(432, 467)
+
+[node name="24" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 467)
+
+[node name="25" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(548, 467)
+
+[node name="26" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(605, 467)
+
+[node name="27" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(662, 467)
+
+[node name="28" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(720, 467)
+
+[node name="29" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(777, 467)
+
+[node name="30" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(834, 467)
+
+[node name="31" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(834, 410)
+
+[node name="32" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(777, 410)
+
+[node name="33" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(720, 410)
+
+[node name="34" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(662, 410)
+
+[node name="35" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(605, 410)
+
+[node name="36" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(547, 410)
+
+[node name="37" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 410)
+
+[node name="38" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(432, 410)
+
+[node name="39" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(375, 410)
+
+[node name="40" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 410)
+
+[node name="41" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 353)
+
+[node name="42" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(374, 353)
+
+[node name="43" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(432, 353)
+
+[node name="44" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 353)
+
+[node name="45" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(548, 353)
+
+[node name="46" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(605, 353)
+
+[node name="47" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(662, 353)
+
+[node name="48" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(720, 353)
+
+[node name="49" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(778, 353)
+
+[node name="50" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(834, 353)
+
+[node name="51" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(834, 295)
+
+[node name="52" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(776, 295)
+
+[node name="53" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(718, 295)
+
+[node name="54" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(661, 295)
+
+[node name="55" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(603, 295)
+
+[node name="56" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(546, 295)
+
+[node name="57" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 295)
+
+[node name="58" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(431, 295)
+
+[node name="59" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(374, 295)
+
+[node name="60" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(317, 295)
+
+[node name="61" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(317, 238)
+
+[node name="62" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(374, 238)
+
+[node name="63" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(431, 238)
+
+[node name="64" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 238)
+
+[node name="65" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(547, 238)
+
+[node name="66" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(604, 238)
+
+[node name="67" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(662, 238)
+
+[node name="68" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(719, 238)
+
+[node name="69" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(777, 238)
+
+[node name="70" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(835, 238)
+
+[node name="71" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(835, 180)
+
+[node name="72" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(775, 180)
+
+[node name="73" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(719, 180)
+
+[node name="74" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(660, 180)
+
+[node name="75" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(604, 180)
+
+[node name="76" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(546, 180)
+
+[node name="77" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 180)
+
+[node name="78" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(432, 180)
+
+[node name="79" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(373, 180)
+
+[node name="80" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 180)
+
+[node name="81" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 124)
+
+[node name="82" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(374, 124)
+
+[node name="83" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(432, 124)
+
+[node name="84" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 124)
+
+[node name="85" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(546, 124)
+
+[node name="86" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(604, 124)
+
+[node name="87" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(660, 124)
+
+[node name="88" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(719, 124)
+
+[node name="89" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(775, 124)
+
+[node name="90" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(834, 124)
+
+[node name="91" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(834, 67)
+
+[node name="92" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(778, 67)
+
+[node name="93" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(719, 67)
+
+[node name="94" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(660, 67)
+
+[node name="95" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(605, 67)
+
+[node name="96" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(546, 67)
+
+[node name="97" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(489, 67)
+
+[node name="98" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(432, 67)
+
+[node name="99" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(374, 67)
+
+[node name="100" type="Marker2D" parent="Tile_Marker"]
+position = Vector2(316, 67)
