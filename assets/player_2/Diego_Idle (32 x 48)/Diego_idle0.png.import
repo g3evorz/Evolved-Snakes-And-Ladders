@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcy6c07un24n8"
-path="res://.godot/imported/sprite_1.png-26f709df2893973969a4d0a4de9487e8.ctex"
+uid="uid://duxxt6ohlauag"
+path="res://.godot/imported/Diego_idle0.png-b468dd1788ef54dd3c0037d990d31d08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Idle (32 x 32)/sprite_1.png"
-dest_files=["res://.godot/imported/sprite_1.png-26f709df2893973969a4d0a4de9487e8.ctex"]
+source_file="res://assets/player_2/Diego_Idle (32 x 48)/Diego_idle0.png"
+dest_files=["res://.godot/imported/Diego_idle0.png-b468dd1788ef54dd3c0037d990d31d08.ctex"]
 
 [params]
 

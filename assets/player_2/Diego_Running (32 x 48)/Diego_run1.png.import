@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://knf3ik54rkr2"
-path="res://.godot/imported/Run1.png-80c54f900bae71e28938873d5a7f71e6.ctex"
+uid="uid://bnexmrtxllhi"
+path="res://.godot/imported/Diego_run1.png-6414c43d6763e5b46fdfb666440a05ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Running (32 x 32)/Run1.png"
-dest_files=["res://.godot/imported/Run1.png-80c54f900bae71e28938873d5a7f71e6.ctex"]
+source_file="res://assets/player_2/Diego_Running (32 x 48)/Diego_run1.png"
+dest_files=["res://.godot/imported/Diego_run1.png-6414c43d6763e5b46fdfb666440a05ba.ctex"]
 
 [params]
 
