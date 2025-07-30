@@ -2,7 +2,7 @@ extends PathFollow2D
 
 signal movement_finished # Sinyal saat pemain selesai bergerak
 
-@export var speed := 200 # Kecepatan gerakan
+var speed = global.player_speed # Kecepatan gerakan
 @export var hitbox: Area2D # Area2D untuk mendeteksi tangga
 
 var moving = false
@@ -37,6 +37,7 @@ func _process(delta):
 ## Memulai pergerakan dengan jumlah langkah tertentu
 ## @param steps: Jumlah langkah yang akan ditempuh
 func start_movement(steps: int):
+	global.player_is_move = true
 	if not moving:
 		var path = get_parent().curve # ambil data di Path2D
 		if current_point_index < path.get_point_count(): # cek titik < titik tujuan

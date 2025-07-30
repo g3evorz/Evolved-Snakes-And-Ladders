@@ -208,15 +208,17 @@ stretch_mode = 0
 script = ExtResource("4_1bvp3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Roll_Button"]
+texture_filter = 1
 position = Vector2(32.1429, -60.2701)
 scale = Vector2(3.0692, 6.40759)
 sprite_frames = SubResource("SpriteFrames_0vlqb")
 animation = &"roll"
+frame = 5
+frame_progress = 1.0
 
 [node name="Timer" type="Timer" parent="Roll_Button"]
 wait_time = 0.5
 one_shot = true
 
 [connection signal="body_entered" from="Path2D/Ladder_1" to="Path2D/Player" method="_on_ladder_1_body_entered"]
-[connection signal="animation_finished" from="Roll_Button/AnimatedSprite2D" to="Roll_Button" method="_on_dice_animation_finished"]
 [connection signal="timeout" from="Roll_Button/Timer" to="Roll_Button" method="_on_timer_timeout"]

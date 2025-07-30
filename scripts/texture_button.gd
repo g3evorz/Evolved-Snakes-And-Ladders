@@ -12,19 +12,17 @@ func _ready():
 func _on_button_pressed():
 	sprite.play("roll")
 	random_number = randi_range(1, 6)
-	sprite.animation_finished.connect(dice_animation_finished)
+	sprite.animation_finished.connect(dice_animation)
 
 ## Mengembalikan angka acak yang dihasilkan
 ## @return: Angka acak dari 1 hingga 6
 func get_random_number() -> int:
 	return random_number
 
-func dice_animation_finished():
+func dice_animation():
 	$Timer.start()
 	sprite.play("face")
 	sprite.frame = random_number - 1
-	
-
 
 func _on_timer_timeout() -> void:
 	number_generated.emit(random_number)

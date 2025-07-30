@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 func _ready():
 	if global.player_is_move:
-		sprite.play("idle")
-	else:
 		sprite.play("walk")
+		global.button_state = false
+	else:
+		sprite.play("idle")

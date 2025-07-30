@@ -2,8 +2,7 @@ extends PathFollow2D
 
 signal movement_finished # Sinyal saat bot selesai bergerak
 
-@export var speed := 200 # Kecepatan gerakan
-
+var speed = global.player_speed # Kecepatan gerakan
 var moving = false
 var target_position = Vector2.ZERO
 var current_point_index = 0
