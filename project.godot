@@ -10,14 +10,17 @@ config_version=5
 
 [application]
 
+<<<<<<< HEAD
 config/name="GAMESEED Projects Demo"
-run/main_scene="res://scene/main.tscn"
+=======
+config/name="GAMESEED Projects"
+<<<<<<< HEAD
+>>>>>>> d4d04cc (Removed unused files)
+=======
+>>>>>>> 69ea2eee7ac2871bab27c6e3fd7555aa53960525
+run/main_scene="uid://e2t0ulvl0opr"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-global="*res://scripts/Global.gd"
 
 [dotnet]
 
