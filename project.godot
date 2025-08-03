@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="New Game Project"
-run/main_scene="uid://e2t0ulvl0opr"
+run/main_scene="uid://caiyokl0dyyyu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="New Game Project"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [rendering]
 
